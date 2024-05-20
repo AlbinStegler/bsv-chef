@@ -106,6 +106,7 @@ class RecipeController(Controller):
         recipe_readiness = self.get_readiness_of_recipes(
             recipes=self.recipes, diet=diet)
         if len(recipe_readiness.keys()) == 0: 
+            print("No recipes available for the selected diet.")
             return None
 
         # order the recipes in descending order according to the readiness values, i.e., the first recipe in the list is the one with the highest readiness value
